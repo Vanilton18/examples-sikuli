@@ -15,20 +15,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.SwingUtilities;
 
-/**
- * A Swing program that demonstrates how to use JRadioButton component.
- * 
- * @author www.codejava.net
- * 
- */
 public class RadioButton extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private JButton buttonOK = new JButton("OK");
+	private JButton buttonFechar = new JButton("Fechar");
 
 	private JRadioButton optionLinux = new JRadioButton("Linux");
 	private JRadioButton optionWin = new JRadioButton("Windows");
@@ -75,6 +67,8 @@ public class RadioButton extends JFrame {
 
 		constraints.gridy = 2;
 		add(buttonOK, constraints);
+		constraints.gridx = 2;
+		add(buttonFechar,constraints);
 
 		RadioButtonActionListener actionListener = new RadioButtonActionListener();
 		optionLinux.addActionListener(actionListener);
@@ -98,6 +92,14 @@ public class RadioButton extends JFrame {
 			}
 		});
 
+		buttonFechar.addActionListener(new ActionListener() {		
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				
+			}
+		});
+		
 		pack();
 		setLocationRelativeTo(null);
 	}

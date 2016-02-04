@@ -107,7 +107,7 @@ public class Main extends JFrame {
 	}
 
 	@SuppressWarnings("serial")
-	private class Sair extends AbstractAction {
+	public class Sair extends AbstractAction {
 		public Sair() {
 			putValue(NAME, "Sair");
 			putValue(SHORT_DESCRIPTION, "Fechar a aplicação");
