@@ -77,7 +77,9 @@ public class Main extends JFrame {
 		menuBar.add(funcoes);
 
 		JMenuItem fbasicas = new JMenuItem("Find e Click");
+		JMenuItem finputpaste = new JMenuItem("Input e Paste");
 		JMenuItem fsimilaridade = new JMenuItem("Similaridade");
+		
 
 		JMenuItem mntmSair = new JMenuItem("Sair");
 		mntmSair.setAction(acaoSair);
@@ -101,8 +103,16 @@ public class Main extends JFrame {
 
 			}
 		});
+		finputpaste.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				InputAndPaste.createFrame();
+				
+			}
+		});
 
 		funcoes.add(fbasicas);
+		funcoes.add(finputpaste);
 		funcoes.add(fsimilaridade);
 	}
 
